@@ -1,6 +1,6 @@
 #!/bin/bash
 
-npm install nightmare
+#npm install nightmare
 
 URL=`minikube service --url jenkins`
 
@@ -16,4 +16,4 @@ echo "TOKEN is $TOKEN"
 
 echo $TOKEN > token.txt
 
-node setup.js $TOKEN $URL
+#node setup.js $TOKEN $URL

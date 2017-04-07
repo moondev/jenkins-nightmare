@@ -10,7 +10,7 @@ nightmare
   .wait("#security-token")
   .type("#security-token",token)
   .click(".btn-primary")
-  .wait(15000)
+  .wait(".install-recommended")
   .click(".install-recommended")
   .wait("button.skip-first-user")
   .click("button.skip-first-user")
@@ -25,6 +25,8 @@ nightmare
   .wait("input[name='plugin.blueocean.default']")
   .click("input[name='plugin.blueocean.default']")
   .click("#yui-gen1 button")
+  .wait(10000)
+  .goto(jenkinsurl + "/blue")
   .wait(10000)
   .end(() => "jenkins config done")
   .then((value) => console.log(value));

@@ -10,10 +10,10 @@ PODID=`kubectl get pods --selector=app=jenkins --output=jsonpath={.items..metada
 
 echo "PODIS is $PODID"
 
-TOKEN=`kubectl exec $PODID cat /var/jenkins_home/secrets/initialAdminPassword`
+TOKEN=`kubectl exec $PODID cat /root/.jenkins/secrets/initialAdminPassword`
 
 echo "TOKEN is $TOKEN"
 
 echo $TOKEN > token.txt
 
-#node setup.js $TOKEN $URL
+node setup.js $TOKEN $URL

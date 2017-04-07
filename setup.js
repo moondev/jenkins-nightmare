@@ -1,5 +1,5 @@
 var Nightmare = require('nightmare');		
-var nightmare = Nightmare({ show: false, waitTimeout: 300000 });
+var nightmare = Nightmare({ show: true, waitTimeout: 300000 });
 
 var token = process.argv[2];
 

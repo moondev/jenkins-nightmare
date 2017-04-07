@@ -8,8 +8,8 @@ node {
         sh "kubectl rollout status deployments/jenkins"
         sh "sleep 2"
 
-    // stage "setup jenkins"
-    //     sh "./start-k8s.sh"
+    stage "setup jenkins"
+        sh "./start-k8s.sh"
 
 
 }

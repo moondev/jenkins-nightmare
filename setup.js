@@ -26,7 +26,7 @@ nightmare
   .wait("input[name='plugin.blueocean.default']")
   .click("input[name='plugin.blueocean.default']")
   .click("#yui-gen1 button")
-  .wait(20000)
+  .wait(25000)
   .goto(jenkinsurl + "/blue")
   .wait(10000)
   .end(() => "jenkins config done")

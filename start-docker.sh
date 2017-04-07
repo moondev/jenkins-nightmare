@@ -12,4 +12,4 @@ TOKEN=`docker exec jenkins-nightmare cat /var/jenkins_home/secrets/initialAdminP
 
 echo "TOKEN is $TOKEN"
 
-node setup.js $TOKEN
+node setup.js $TOKEN 'http://localhost:4444'

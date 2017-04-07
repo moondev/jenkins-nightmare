@@ -3,6 +3,8 @@ var nightmare = Nightmare({ show: true, waitTimeout: 300000 });
 
 var token = process.argv[2];
 
+var jenkinsurl = process.argv[3];
+
 nightmare
   .goto('http://localhost:4444')
   .wait("#security-token")
@@ -31,14 +33,9 @@ nightmare
   .wait("input[name='plugin.blueocean.default']")
   .click("input[name='plugin.blueocean.default']")
   .click("#yui-gen1 button")
-  
-  .wait('#sdfsdfsdf')
-  .evaluate(function () {
-    return document.querySelector('#zero_click_wrapper .c-info__title a').href;
-  })
-  .end()
-  .then(function (result) {
-    console.log(result);
+  .wait(10000)
+  .then(function () {
+    console.log('finished');
   })
   .catch(function (error) {
     console.error('Search failed:', error);

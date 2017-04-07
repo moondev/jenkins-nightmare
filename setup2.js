@@ -1,5 +1,5 @@
 var Nightmare = require('nightmare');		
-var nightmare = Nightmare({ show: true, waitTimeout: 300000 });
+var nightmare = Nightmare({ show: false, waitTimeout: 300000 });
 
 var token = process.argv[2];
 
@@ -10,8 +10,7 @@ nightmare
   .wait("#security-token")
   .type("#security-token",token)
   .click(".btn-primary")
-  // .wait(".install-recommended")
-  .wait(7000)
+  .wait(".install-recommended")
   .click(".install-recommended")
   .wait("button.skip-first-user")
   .click("button.skip-first-user")
